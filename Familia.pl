@@ -17,6 +17,9 @@ es_tio(A,B):- es_hermano(A,C), es_padre(C,B).
 es_casado(A,B):- es_padre(A,C), es_padre(B,C).
 es_feliz(A) :- es_casado(A,B).
 
+es_bisabuelo(A,B):- es_abuelo(C,B), es_padre(A,C).
+es_nieto(A,B):- es_hijo(B,C),es_hijo(C,A).
+
 es_familiar(A,B):-
     es_padre(B,A);
     es_abuelo(B,A);
