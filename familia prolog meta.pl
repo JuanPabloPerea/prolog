@@ -33,6 +33,7 @@ familiar(A,B):-
     nieto(A,B);
     tio(A,B);
     sobrino(A,B);
+    casado(A,B);
     primo(A,B).
 familiares(A,L):-findall(B,familiar(A,B),L).
 casado(A,B):- es_padre(A,C),es_padre(B,C).
