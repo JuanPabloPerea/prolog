@@ -26,6 +26,7 @@ tio(A,B):- hermano(A,C), es_padre(C,B).
 sobrino(A,B):- hermano(B,C), hijo(A,C).
 primo(A,B):- es_padre(C,B), es_padre(D,A), hermano(C,D).
 familiar(A,B):-
+    hermano(A,B);
     padre(A,B);
     hijo(A,B);
     abuelo(A,B);
